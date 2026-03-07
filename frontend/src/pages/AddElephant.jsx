@@ -4,6 +4,8 @@ import api from '../utils/api';
 
 function AddElephant() {
     const navigate = useNavigate();
+    const [isSaving, setIsSaving] = useState(false);
+    const [error, setError] = useState('');
     const [formData, setFormData] = useState({
         name: '',
         age: '',
@@ -22,11 +24,16 @@ function AddElephant() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsSaving(true);
+        setError('');
         try {
             await api.post('/elephants', formData);
             navigate('/dashboard');
         } catch (err) {
             console.error(err);
+            setError(err.response?.data?.error || 'Failed to create profile. Please try again.');
+        } finally {
+            setIsSaving(false);
         }
     };
 
@@ -36,6 +43,12 @@ function AddElephant() {
 
             <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto' }}>
                 <h1 style={{ marginBottom: '2rem' }}>Add New Elephant Profile</h1>
+
+                {error && (
+                    <div style={{ background: 'rgba(255, 0, 0, 0.1)', color: '#ff4444', padding: '1rem', borderRadius: '8px', marginBottom: '1.5rem', border: '1px solid rgba(255, 0, 0, 0.2)' }}>
+                        {error}
+                    </div>
+                )}
 
                 <form onSubmit={handleSubmit}>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
@@ -59,7 +72,7 @@ function AddElephant() {
                         </div>
                         <div className="form-group">
                             <label>Image URL</label>
-                            <input type="url" name="image_url" value={formData.image_url} onChange={handleChange} required />
+                            <input type="text" name="image_url" value={formData.image_url} onChange={handleChange} placeholder="https://example.com/image.jpg" required />
                         </div>
                     </div>
 
@@ -94,7 +107,14 @@ function AddElephant() {
                         <textarea name="notes" rows="4" value={formData.notes} onChange={handleChange}></textarea>
                     </div>
 
-                    <button type="submit" className="btn" style={{ width: '100%', marginTop: '1rem' }}>Create Profile</button>
+                    <button
+                        type="submit"
+                        className="btn"
+                        style={{ width: '100%', marginTop: '1rem', opacity: isSaving ? 0.7 : 1 }}
+                        disabled={isSaving}
+                    >
+                        {isSaving ? 'Creating Profile...' : 'Create Profile'}
+                    </button>
                 </form>
             </div>
         </div>

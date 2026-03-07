@@ -220,15 +220,17 @@ def edit_elephant(elephant_id):
     gender = data.get('gender')
     weight = data.get('weight', 0.0)
     height = data.get('height', 0.0)
+    base_health_score = int(data.get('base_health_score', 80))
+    activity_level = data.get('activity_level', 'Medium')
     notes = data.get('notes', '')
     image_url = data.get('image_url')
     
     db = get_db()
     db.execute('''
         UPDATE elephants 
-        SET name=?, age=?, gender=?, weight_kg=?, height_m=?, special_notes=?, image_url=?
+        SET name=?, age=?, gender=?, weight_kg=?, height_m=?, special_notes=?, image_url=?, base_health_score=?, activity_level=?
         WHERE id=?
-    ''', [name, age, gender, weight, height, notes, image_url, elephant_id])
+    ''', [name, age, gender, weight, height, notes, image_url, base_health_score, activity_level, elephant_id])
     db.commit()
     
     return jsonify({'message': 'Elephant profile updated successfully'}), 200

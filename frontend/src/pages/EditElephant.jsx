@@ -7,7 +7,8 @@ function EditElephant() {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [formData, setFormData] = useState({
-        name: '', age: '', gender: 'Male', weight: '', height: '', image_url: '', notes: ''
+        name: '', age: '', gender: 'Male', weight: '', height: '', image_url: '', notes: '',
+        base_health_score: 80, activity_level: 'Medium'
     });
 
     useEffect(() => {
@@ -22,7 +23,9 @@ function EditElephant() {
                     weight: elephant.weight_kg,
                     height: elephant.height_m,
                     image_url: elephant.image_url,
-                    notes: elephant.special_notes
+                    notes: elephant.special_notes,
+                    base_health_score: elephant.base_health_score || 80,
+                    activity_level: elephant.activity_level || 'Medium'
                 });
                 setLoading(false);
             } catch (err) {
@@ -77,7 +80,7 @@ function EditElephant() {
                         </div>
                         <div className="form-group">
                             <label>Image URL</label>
-                            <input type="url" name="image_url" value={formData.image_url} onChange={handleChange} required />
+                            <input type="text" name="image_url" value={formData.image_url} onChange={handleChange} required />
                         </div>
                     </div>
 
@@ -92,12 +95,29 @@ function EditElephant() {
                         </div>
                     </div>
 
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                        <div className="form-group">
+                            <label>Base Health Score</label>
+                            <input type="number" min="1" max="100" name="base_health_score" value={formData.base_health_score} onChange={handleChange} required />
+                        </div>
+                        <div className="form-group">
+                            <label>Activity Level</label>
+                            <select name="activity_level" value={formData.activity_level} onChange={handleChange} required>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div className="form-group">
                         <label>Special Notes / Medical History</label>
                         <textarea name="notes" rows="4" value={formData.notes || ''} onChange={handleChange}></textarea>
                     </div>
 
-                    <button type="submit" className="btn" style={{ width: '100%', marginTop: '1rem' }}>Save Changes</button>
+                    <button type="submit" className="btn" style={{ width: '100%', marginTop: '1rem' }} disabled={loading}>
+                        {loading ? 'Saving...' : 'Save Changes'}
+                    </button>
                 </form>
             </div>
         </div>
