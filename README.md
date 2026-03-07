@@ -150,11 +150,7 @@ npm run dev
 | `/admin/analytics/forecast` | GET | Visitor |
 | `/admin/tariffs` | GET | Visitor |
 
----
 
-## 👥 Contributors
-- **Eranda** — Lead System Architect & Developer
 
----
 
 Designed for SLIIT Research Project — 2026
