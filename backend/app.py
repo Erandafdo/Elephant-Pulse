@@ -69,7 +69,7 @@ def query_db(query, args=(), one=False):
     cur = get_db().execute(query, args)
     rv = cur.fetchall()
     db = get_db()
-    db.commit() # Added commit here in case it's a mutation. Better yet, we should explicitely commit on inserts.
+    db.commit() 
     cur.close()
     return (rv[0] if rv else None) if one else rv
 

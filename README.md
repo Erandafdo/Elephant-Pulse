@@ -122,6 +122,10 @@ Elephant-Pulse/
 cd backend
 source .venv/bin/activate  # Or .venv\Scripts\activate on Windows
 pip install -r requirements.txt
+
+# To retrain AI models (optional):
+python train_health_models.py
+
 python app.py
 ```
 *API runs at `http://localhost:5005`*
