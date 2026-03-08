@@ -353,27 +353,7 @@ function StressDetector() {
                         )}
                     </div>
 
-                    <div className="glass-card" style={{ flex: 1, padding: 0, overflow: 'hidden' }}>
-                        <div style={{ padding: '1rem 1.5rem', background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid var(--glass-border)', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            <Terminal size={18} style={{ color: 'var(--primary-accent)' }} />
-                            <h3 style={{ margin: 0, fontSize: '1rem' }}>AI Activity Log</h3>
-                        </div>
-                        <div style={{ padding: '1.5rem', fontSize: '0.85rem', maxHeight: '300px', overflowY: 'auto' }}>
-                            {(!isLive && !result) || liveStatus === 'ERROR' || aiLog.length === 0 ? (
-                                <p style={{ color: 'var(--text-muted)' }}>Terminal idle...</p>
-                            ) : (
-                                aiLog.map((log, i) => (
-                                    <div key={i} style={{ marginBottom: '12px', borderLeft: `2px solid ${log.status === 'Healthy' ? '#00ff88' : '#ff4081'}`, paddingLeft: '12px' }}>
-                                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2px' }}>
-                                            <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>{log.time}</span>
-                                            <span style={{ color: log.status === 'Healthy' ? '#00ff88' : '#ff4081', fontSize: '0.7rem', fontWeight: 700 }}>[{log.status}]</span>
-                                        </div>
-                                        <div style={{ color: '#fff', fontWeight: 500 }}>{log.event}</div>
-                                    </div>
-                                ))
-                            )}
-                        </div>
-                    </div>
+
                 </div>
             </div>
 

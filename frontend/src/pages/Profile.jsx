@@ -196,7 +196,7 @@ function Profile() {
                                             <tr>
                                                 <th>Date</th>
                                                 <th>Temp</th>
-                                                <th>AI Status</th>
+                                                <th>Health Stats</th>
                                             </tr>
                                         </thead>
                                         <tbody>
