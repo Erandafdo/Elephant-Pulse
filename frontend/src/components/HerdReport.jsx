@@ -29,7 +29,7 @@ function HerdReport() {
     return (
         <div className="container" style={{ paddingTop: '2rem' }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem', padding: '3rem', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', border: '1px dashed var(--glass-border)', color: 'var(--text-muted)' }}>
-                <h2 style={{ color: '#fff' }}>Health Profiles & Herd Report</h2>
+                <h2 style={{ color: 'var(--text-main)' }}>Health Profiles & Herd Report</h2>
                 <p style={{ marginTop: '1rem', fontSize: '1.1rem' }}>Please select an elephant from the <Link to="/dashboard" style={{ color: 'var(--primary-accent)', textDecoration: 'none' }}>Dashboard</Link> to view their specific health predictors and log daily records.</p>
             </div>
 
@@ -48,7 +48,7 @@ function HerdReport() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
                     <div style={{ background: 'rgba(255,255,255,0.05)', padding: '1.5rem', borderRadius: '8px', textAlign: 'center', border: '1px solid var(--glass-border)' }}>
                         <h4 style={{ margin: 0, color: 'var(--text-muted)', fontSize: '0.9rem', textTransform: 'uppercase' }}>Total Herd</h4>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#fff', marginTop: '0.5rem' }}>{elephants.length}</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--text-main)', marginTop: '0.5rem' }}>{elephants.length}</div>
                     </div>
                     <div style={{ background: 'rgba(0, 255, 136, 0.05)', padding: '1.5rem', borderRadius: '8px', textAlign: 'center', border: '1px solid rgba(0, 255, 136, 0.2)' }}>
                         <h4 style={{ margin: 0, color: '#00ff88', fontSize: '0.9rem', textTransform: 'uppercase' }}>Healthy</h4>
@@ -95,7 +95,7 @@ function HerdReport() {
                                             {(elephant.diagnosis && elephant.diagnosis !== 'None' && elephant.diagnosis !== 'No_Diagnosis') ? elephant.diagnosis : 'Pending Analysis'}
                                         </td>
                                         <td style={{ padding: '12px' }}>
-                                            <Link to={`/profile/${elephant.id}`} className="btn" style={{ padding: '4px 8px', fontSize: '0.8rem', textDecoration: 'none', background: 'rgba(255,255,255,0.1)', color: '#fff' }}>
+                                            <Link to={`/profile/${elephant.id}`} className="btn" style={{ padding: '4px 8px', fontSize: '0.8rem', textDecoration: 'none', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', color: 'var(--text-main)' }}>
                                                 View Profile
                                             </Link>
                                         </td>

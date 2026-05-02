@@ -1,8 +1,8 @@
 # 🐘 Elephant-Pulse: Intelligent Care & Visitor Insight System
 
-A unified, AI-powered web application for monitoring and managing elephant health, nutrition, and stress, alongside a robust visitor analytics and management platform for the Pinnawala Elephant Orphanage.
+A unified, AI-powered web application for monitoring and managing elephant health, nutrition, and stress — alongside a robust visitor analytics and management platform for the Pinnawala Elephant Orphanage.
 
-Built with a **React** frontend and a **Flask** backend (Care System), with a separate **Visitor API** for guest management.
+Built with a **React (Vite)** frontend and a **Flask** backend (Care System), and a modularly connected **Visitor System**.
 
 ---
 
@@ -10,14 +10,10 @@ Built with a **React** frontend and a **Flask** backend (Care System), with a se
 - [System Overview](#-system-overview)
 - [Project Structure](#-project-structure)
 - [Modules](#-modules)
-  - [Elephant Care System](#1-elephant-care-system)
-  - [Visitor Insight System](#2-visitor-insight-system)
 - [AI Models](#-ai-models)
-- [Datasets](#-datasets)
-- [Database Schema](#-database-schema)
+- [UI Features](#-ui-features)
 - [Tech Stack](#-tech-stack)
 - [How to Run](#-how-to-run)
-- [API Reference](#-api-reference)
 
 ---
 
@@ -27,54 +23,45 @@ Elephant-Pulse consolidates advanced AI monitoring with sanctuary management. It
 
 | Subsystem | Key Features |
 |---|---|
-| **🐘 Elephant Care** | Health profiles, AI health status prediction, stress detection (CV), and AI-optimised feeding plans. |
-| **�️ Visitor Insight** | Analytics dashboard, live visitor tracking, crowd density forecasting, and ticket tariff management. |
+| **🐘 Elephant Care** | Health profiles, AI health status prediction, local stress detection (CV), and AI-optimised feeding plans. |
+| **🎟️ Visitor Insight** | Analytics dashboard, live visitor tracking, crowd density forecasting, and ticket tariff management. |
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 Elephant-Pulse/
 │
 ├── backend/                            # Elephant Care API (Flask)
-│   ├── app.py                          # Care API routes (Health, Stress, Food)
-│   ├── init_db.py                      # Database initialisation script
-│   ├── migrate_db.py                   # Database migration script
-│   ├── train_health_models.py          # AI model training script
-│   ├── elephant_health_model.pkl       # Trained health classifier
-│   ├── diagnosis_model.pkl             # Trained diagnosis classifier
-│   ├── database.db                     # Unified SQLite database
-│   ├── requirements.txt                # Python dependencies
-│   │
-│   ├── core_logic/                     # AI & Business Logic
-│   │   ├── health_predictor.py         # AI health inference
-│   │   ├── food_quantity_engine.py     # AI nutritional engine
-│   │   ├── camera.py                   # Real-time stress detection feed
-│   │   └── reporting.py                # Automated feeding reports
-│   │
-│   └── models/
-│       └── stress_detector.pkl         # Trained CV stress model
+│   ├── app.py                          # Core API + Integrated AI prediction endpoints
+│   ├── core_logic/                     # AI & Business Logic (Optical Flow, Feature Extraction)
+│   ├── datasets/                       # Elephant vitals and feeding context
+│   ├── models/                         # Trained ML Models (RandomForest, Pickle files)
+│   └── database.db                     # Unified SQLite database
 │
 ├── frontend/                           # Unified React/Vite Web App
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Login.jsx               # Caretaker/Vet Login
-│   │   │   ├── Dashboard.jsx           # Care System Herd Overview
-│   │   │   ├── Profile.jsx             # Individual Elephant Health Profile
-│   │   │   ├── StressDetector.jsx      # Live Stress Monitoring
-│   │   │   ├── FoodChain.jsx           # AI Feeding Management
-│   │   │   ├── VisitorLogin.jsx        # Visitor Admin Login
-│   │   │   ├── VisitorAdminDashboard.jsx # Visitor Analytics & Store Management
-│   │   │   └── VisitorPublicPage.jsx   # Public-facing Visitor Portal
-│   │   │
-│   │   ├── components/                 # Shared UI components
-│   │   └── utils/
-│   │       ├── api.js                  # Care API Client (Port 5005)
-│   │       └── visitorApi.js           # Visitor API Client (Port 8000)
-│   └── vite.config.js
+│   ├── public/                         # Static assets (AI-generated elephant portraits)
+│   └── src/
+│       ├── pages/
+│       │   ├── Dashboard.jsx           # Herd overview with grid/list toggle
+│       │   ├── StressDetector.jsx      # Live monitoring & local AI video analysis
+│       │   ├── FoodChain.jsx           # Feeding logs, AI recommendations & forecast
+│       │   └── VisitorAdminDashboard.jsx # Visitor management & analytics
+│       ├── components/
+│       │   ├── Navigation.jsx          # Sticky nav with 🌙/☀️ dark/light mode toggle
+│       │   └── ProfileHeader.jsx       # Adaptive elephant profile card
+│       ├── utils/
+│       │   ├── api.js                  # Care System client (Port 5005)
+│       │   └── visitorApi.js           # Visitor System client (Port 8000)
+│       └── index.css                   # Global design system with dark/light CSS variables
 │
-└── visitor ins/                        # Visitor System Assets (Internal)
+└── visitor_system/                     # Visitor System Microservices
+    ├── Backend/                        # Native FastAPI Visitor Logic
+    ├── Admin_Frontend/                 # Specialized Vite React Admin Dashboard
+    ├── Visitor_Frontend/               # Visitor-facing Vite React App
+    ├── docker-compose.yml              # Microservice deployment config
+    └── app.py                          # Lightweight mock API for direct React integration
 ```
 
 ---
@@ -82,16 +69,16 @@ Elephant-Pulse/
 ## 🧩 Modules
 
 ### 1. Elephant Care System
-- **Health Profiles**: Monitor vitals and log daily reports.
-- **AI Diagnosis**: Random Forest & Gradient Boosting models predict 5 health statuses and specific clinical diagnoses.
-- **Stress Detector**: Neural-based computer vision classifies stress levels from real-time video streams using Optical Flow.
-- **Food Chain**: Personalised nutritional engine using environmental and activity data to calculate optimal feeding schedules.
+- **Health Profiles**: Monitor vitals and log daily health reports with AI-generated elephant portraits for each profile.
+- **AI Diagnosis**: Random Forest & Gradient Boosting models accurately predict 5 health statuses and specific clinical diagnoses.
+- **Stress Detector**: **Fully local** AI computer vision using Optical Flow processes both live CCTV feeds and `.mp4` video uploads — no cloud API dependency.
+- **Food Chain**: Personalized nutritional calculation engine with 7-day AI forecasts and feeding history.
 
 ### 2. Visitor Insight System
-- **Analytics Dashboard**: Monitor total revenue, live visitors, and AI accuracy.
-- **Crowd Density**: AI-driven 7-day visitor forecasting and real-time crowd heatmap.
-- **Check-in Terminal**: Manual check-in system for verified visitor tickets.
-- **Store Management**: Dynamic ticket tariff configuration and premium package controls.
+- **Analytics Dashboard**: Tracks revenue, live visitors, and AI accuracy metrics.
+- **Tariff Engine**: Full CRUD for ticket pricing tiers — changes reflect immediately in the UI.
+- **Check-in Terminal**: Manual check-in updates the live visitor occupancy count in real time.
+- **Advanced Microservices**: Designed for enterprise scaling via Docker, FastAPI, MongoDB, and Next.js.
 
 ---
 
@@ -100,61 +87,173 @@ Elephant-Pulse/
 | Model | Algorithm | Purpose | Output |
 |---|---|---|---|
 | **Health Classifier** | Random Forest | Vitals analysis | Healthy, Infection, Dehydration, etc. |
-| **Diagnosis Classifier**| GD Boosting | Clinical insight | Bacterial Infection, Arthritis, etc. |
-| **Stress Detector** | Random Forest (CV) | Motion analysis | Stress Probability % |
+| **Diagnosis Classifier** | Gradient Boosting | Clinical insight | Bacterial Infection, Arthritis, etc. |
+| **Stress Detector** | OpenCV + Random Forest | Motion analysis (local) | Stress Probability % / Normal Behavior |
 | **Nutrition Engine** | Rule-Based AI | Feeding optimization | Morning/Evening KG split + Remarks |
+
+---
+
+## 🎨 UI Features
+
+- **Dark / Light Mode Toggle** — Persistent ☀️/🌙 button in the navigation header. Pure AMOLED black dark mode.
+- **Safari Tech Color Palette** — Curated Emerald Green (`#10b981`), Slate, and Rose accent system with adaptive CSS variables.
+- **AI-Generated Elephant Portraits** — Unique, photorealistic AI images for every elephant profile stored locally in `/public`.
+- **Glassmorphism Cards** — Adaptive frosted-glass panels that adjust for both light and dark backgrounds.
+- **Responsive Grid/List Toggle** — Switch between card grid and compact list views on the Dashboard.
+- **Smooth Theme Transitions** — 400ms CSS transitions across all background and color changes.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React 19, Framer Motion, Recharts, Lucide React, Vite.
-- **Backend (Care)**: Python 3, Flask, SQLite.
-- **Backend (Visitor)**: FastAPI / Node.js (External Integration).
-- **AI/ML**: Scikit-learn, OpenCV (Computer Vision), Pandas, Numpy.
+| Layer | Technologies |
+|---|---|
+| **Frontend** | React 19, Vite, Vanilla CSS (CSS Variables), Recharts, Lucide React |
+| **Care Backend** | Python 3, Flask, SQLite, Scikit-learn, OpenCV, Pandas |
+| **Visitor Backend** | FastAPI, Node.js, MongoDB, Docker (full stack) |
+| **AI/ML** | Random Forest, Gradient Boosting, Optical Flow (Farneback), NumPy |
 
 ---
 
 ## 🚀 How to Run
 
-### 1. Backend (Elephant Care)
+### Prerequisites
+
+Make sure you have the following installed before starting:
+
+| Requirement | Version | Check Command |
+|---|---|---|
+| **Python** | 3.9+ | `python3 --version` |
+| **Node.js** | 18+ | `node --version` |
+| **npm** | 9+ | `npm --version` |
+| **MongoDB** | 7.0+ | `mongosh --eval "db.version()"` |
+
+> ⚠️ **MongoDB must be running** before starting the Visitor System Backend (Step 3).
+> On macOS: `brew services start mongodb-community`
+
+---
+
+### Step 1 — Elephant Care Backend (Flask API)
+
 ```bash
 cd backend
-source .venv/bin/activate  # Or .venv\Scripts\activate on Windows
+python3 -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-
-# To retrain AI models (optional):
-python train_health_models.py
-
+python init_db.py                # First time only — creates the SQLite database
 python app.py
 ```
-*API runs at `http://localhost:5005`*
+✅ Running at → `http://localhost:5005`
 
-### 2. Backend (Visitor System)
-*Ensure the Visitor backend is running on `http://localhost:8000`.*
+---
 
-### 3. Frontend
+### Step 2 — Main Frontend (React / Vite)
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-*App accessible at `http://localhost:5173`*
+✅ Running at → `http://localhost:5173`
+
+> This is the unified dashboard for **Health Profiles**, **Stress Detection**, **Food Chain**, and integrated **Visitor Admin**.
 
 ---
 
-## 📡 API Reference
+### Step 3 — Visitor System Backend (FastAPI)
 
-| Endpoint | Method | System |
+> Requires **MongoDB** to be running on `localhost:27017`.
+
+```bash
+cd visitor_system/Backend
+python3 -m venv venv
+source venv/bin/activate         # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+**Seed the database** (first time only — populates demo data):
+```bash
+PYTHONPATH=. python app/seed_full_db.py
+```
+
+**Start the server:**
+```bash
+PYTHONPATH=. uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+✅ Running at → `http://localhost:8000`
+📄 API Docs → `http://localhost:8000/docs`
+
+---
+
+### Step 4 — Visitor Public App (React / Vite + TypeScript)
+
+```bash
+cd visitor_system/Visitor_Frontend
+npm install
+npm run dev
+```
+✅ Running at → `http://localhost:3000`
+
+> Visitor-facing app for registration, ticket booking, event timelines, and profile management.
+
+---
+
+### Step 5 — Admin Portal (React / Vite + TypeScript)
+
+```bash
+cd visitor_system/Admin_Frontend
+npm install
+npm run dev
+```
+✅ Running at → `http://localhost:3001`
+
+> Admin dashboard for revenue analytics, visitor heatmaps, tariff management, and event operations.
+
+---
+
+### 📋 Quick Start (All Services)
+
+Run each command in a **separate terminal window**:
+
+```bash
+# Terminal 1 — Care Backend
+cd backend && source .venv/bin/activate && python app.py
+
+# Terminal 2 — Main Frontend
+cd frontend && npm run dev
+
+# Terminal 3 — Visitor Backend
+cd visitor_system/Backend && source venv/bin/activate && PYTHONPATH=. uvicorn app.main:app --port 8000 --reload
+
+# Terminal 4 — Visitor App
+cd visitor_system/Visitor_Frontend && npm run dev
+
+# Terminal 5 — Admin Portal
+cd visitor_system/Admin_Frontend && npm run dev
+```
+
+---
+
+### 🌐 Service Map
+
+| # | Service | URL | Port |
+|---|---------|-----|------|
+| 1 | 🐘 Care Backend (Flask) | `http://localhost:5005` | `5005` |
+| 2 | 🖥️ Main Frontend (React) | `http://localhost:5173` | `5173` |
+| 3 | 📊 Visitor Backend (FastAPI) | `http://localhost:8000` | `8000` |
+| 4 | 🎫 Visitor App | `http://localhost:3000` | `3000` |
+| 5 | 🔐 Admin Portal | `http://localhost:3001` | `3001` |
+
+---
+
+## 🔐 Default Login Credentials
+
+| Portal | Username / Email | Password |
 |---|---|---|
-| `/api/auth/login` | POST | Care |
-| `/api/elephants/:id/health` | POST | Care |
-| `/api/video_feed` | GET | Care (Stress) |
-| `/api/food/ai-recommend` | POST | Care |
-| `/admin/analytics/forecast` | GET | Visitor |
-| `/admin/tariffs` | GET | Visitor |
+| **Vet Dashboard** (Main Frontend) | `vet_kamal` | `password` |
+| **Admin Portal** | `admin@pinnawala.lk` | `admin123` |
+| **Visitor App** | `user1@test.com` | `password123` |
 
+---
 
-
-
-Designed for SLIIT Research Project — 2026
+*Designed for SLIIT Research Project — 2026*

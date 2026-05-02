@@ -5,7 +5,7 @@ import ProfileHeader from '../components/ProfileHeader';
 import '../pages/Dashboard.css';
 import { Play, Video, Activity, Loader2, AlertTriangle, Cpu, Terminal } from 'lucide-react';
 
-const STRESS_API_URL = import.meta.env.VITE_STRESS_API_URL || 'https://inuridinethma-esl-api.hf.space/predict';
+const STRESS_API_URL = import.meta.env.VITE_STRESS_API_URL || 'http://localhost:5005/api/stress/predict';
 const HF_TOKEN = import.meta.env.VITE_HF_TOKEN;
 
 function toPercent(value) {
@@ -216,7 +216,7 @@ function StressDetector() {
                         style={{
                             padding: '8px 16px', borderRadius: '8px', border: 'none', cursor: 'pointer',
                             background: isLive ? '#ff4081' : 'transparent',
-                            color: '#fff', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '8px'
+                            color: 'var(--text-main)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '8px'
                         }}
                     >
                         <Video size={16} /> Live

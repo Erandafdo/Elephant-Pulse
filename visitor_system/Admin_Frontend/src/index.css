@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FEFAE0;
+  --foreground: #0D2B1A;
+
+  --jungle-900: #0D2B1A;
+  --jungle-800: #1A4D2E;
+  --jungle-700: #276F43;
+  --jungle-100: #E8F5E9;
+
+  --earth-900: #8B5E3C;
+  --earth-500: #D4A373;
+  --earth-100: #FAEDCD;
+
+  --ivory: #FEFAE0;
+
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

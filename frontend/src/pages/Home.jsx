@@ -12,31 +12,34 @@ function Home() {
                         <Link to="/login" className="btn btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                             🐘 Vet Portal
                         </Link>
-                        <Link to="/visitor-login" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <a href="http://localhost:3001" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                             👁️ Admin Portal
-                        </Link>
+                        </a>
+                        <a href="http://localhost:3000" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                            🎟️ Visitor App
+                        </a>
                     </div>
                 </div>
             </header>
 
             <section id="features" className="features-section">
                 <div className="container">
-                    <h2 className="section-title">Why Intelligent Elephant AI?</h2>
+                    <h2 className="section-title">How to Use the System</h2>
                     <div className="feature-grid">
                         <div className="feature-card">
-                            <div className="icon">🔍</div>
-                            <h3>Early Diagnosis</h3>
-                            <p>AI algorithms analyze physiological data to predict health risks like Infection, Dehydration, and Arthritis before they become critical.</p>
+                            <div className="icon">🩺</div>
+                            <h3>Vet Portal (Care System)</h3>
+                            <p>Log in using a registered veterinarian account. Manage elephant profiles, log daily vitals, predict health statuses via AI, and generate tailored food plans.</p>
                         </div>
                         <div className="feature-card">
-                            <div className="icon">📊</div>
-                            <h3>Real-time Monitoring</h3>
-                            <p>Track vital signs daily. Instant visual alerts ensure that veterinarians can take immediate action.</p>
+                            <div className="icon">⚙️</div>
+                            <h3>Admin Portal (Management)</h3>
+                            <p>Access the centralized dashboard to review live park analytics, update ticket pricing, monitor revenue, and manage visitor flows in real-time.</p>
                         </div>
                         <div className="feature-card">
-                            <div className="icon">🐘</div>
-                            <h3>Individual Profiles</h3>
-                            <p>Comprehensive history and specific health insights for every elephant in the orphanage.</p>
+                            <div className="icon">📱</div>
+                            <h3>Visitor App (Public)</h3>
+                            <p>A mobile-friendly application for guests. Register an account to book tickets, check current park crowding, and follow the timeline of events.</p>
                         </div>
                     </div>
                 </div>

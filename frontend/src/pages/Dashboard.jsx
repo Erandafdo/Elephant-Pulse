@@ -72,7 +72,7 @@ function Dashboard() {
             <div className="container" style={{ paddingTop: '2rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                     <h1 style={{ margin: 0 }}>Pinnawala Herd Database</h1>
-                    <Link to="/add" className="btn" style={{ padding: '8px 16px', background: 'var(--primary-color)', color: '#fff', textDecoration: 'none', borderRadius: '6px', fontWeight: 'bold' }}>
+                    <Link to="/add" className="btn" style={{ padding: '8px 16px', background: 'var(--primary-accent)', color: 'var(--bg-dark)', textDecoration: 'none', borderRadius: '6px', fontWeight: 'bold' }}>
                         + Add Elephant Profile
                     </Link>
                 </div>
@@ -157,7 +157,7 @@ function Dashboard() {
                                                 to={`/edit/${elephant.id}`}
                                                 className="btn"
                                                 onClick={(e) => e.stopPropagation()}
-                                                style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid var(--glass-border)', color: '#fff', padding: '6px 12px', fontSize: '0.8rem', textDecoration: 'none' }}
+                                                style={{ background: 'transparent', border: '1px solid var(--glass-border)', color: 'var(--text-main)', padding: '6px 12px', fontSize: '0.8rem', textDecoration: 'none' }}
                                             >
                                                 Edit
                                             </Link>
@@ -199,7 +199,7 @@ function Dashboard() {
                                                 to={`/edit/${elephant.id}`}
                                                 className="btn"
                                                 onClick={(e) => e.stopPropagation()}
-                                                style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid var(--glass-border)', color: '#fff', padding: '4px 8px', fontSize: '0.75rem', textDecoration: 'none' }}
+                                                style={{ background: 'transparent', border: '1px solid var(--glass-border)', color: 'var(--text-main)', padding: '4px 8px', fontSize: '0.75rem', textDecoration: 'none' }}
                                             >
                                                 Edit
                                             </Link>

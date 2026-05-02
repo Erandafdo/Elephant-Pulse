@@ -28,6 +28,17 @@ function Navigation({ user }) {
     const lastPart = pathParts[pathParts.length - 1];
     const elephantId = !isNaN(lastPart) && lastPart !== '' ? lastPart : null;
 
+    const [isDarkMode, setIsDarkMode] = React.useState(true);
+
+    const toggleTheme = () => {
+        setIsDarkMode(!isDarkMode);
+        if (isDarkMode) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    };
+
     return (
         <nav className="glass-card" style={{ borderRadius: 0, padding: '1rem 2rem', borderLeft: 0, borderRight: 0, borderTop: 0, position: 'sticky', top: 0, zIndex: 100, marginBottom: '2rem' }}>
             <div className="container navbar" style={{ margin: 0, padding: 0, border: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -97,8 +108,17 @@ function Navigation({ user }) {
 
                     <div style={{ width: '1px', height: '24px', background: 'var(--glass-border)', margin: '0 0.5rem' }}></div>
 
+                    <button
+                        onClick={toggleTheme}
+                        className="btn"
+                        style={{ background: 'transparent', border: '1px solid var(--glass-border)', color: 'var(--text-main)', padding: '0.5rem 0.5rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', cursor: 'pointer' }}
+                        title="Toggle dark/light mode"
+                    >
+                        {isDarkMode ? '☀️' : '🌙'}
+                    </button>
+
                     <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Welcome, {user || 'Vet'}</span>
-                    <button onClick={handleLogout} className="btn" style={{ background: 'transparent', border: '1px solid var(--glass-border)', color: '#fff', padding: '0.5rem 1rem', fontSize: '0.9rem' }}>Logout</button>
+                    <button onClick={handleLogout} className="btn" style={{ background: 'transparent', border: '1px solid var(--glass-border)', color: 'var(--text-main)', padding: '0.5rem 1rem', fontSize: '0.9rem' }}>Logout</button>
                 </div>
             </div>
         </nav>

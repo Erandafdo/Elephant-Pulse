@@ -53,7 +53,7 @@ function EditElephant() {
 
     return (
         <div className="container">
-            <Link to={`/profile/${id}`} style={{ color: '#fff', fontWeight: 600, display: 'inline-block', marginBottom: '2rem' }}>← Cancel Edit</Link>
+            <Link to={`/profile/${id}`} style={{ color: 'var(--primary-accent)', fontWeight: 600, display: 'inline-block', marginBottom: '2rem' }}>← Cancel Edit</Link>
 
             <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto' }}>
                 <h1 style={{ marginBottom: '2rem' }}>Edit {formData.name}'s Profile</h1>

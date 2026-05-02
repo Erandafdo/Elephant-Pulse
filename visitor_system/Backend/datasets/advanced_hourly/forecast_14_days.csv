@@ -1,0 +1,701 @@
+date,hour,location,event,predicted_visitors
+2026-01-01,08:00,Main Entrance,Entry,16
+2026-01-01,08:00,Elephant Bathing Area,River Observation,11
+2026-01-01,08:00,Milk Feeding Nursery,Closed,9
+2026-01-01,08:00,Museum,General Visit,9
+2026-01-01,08:00,Souvenir Shop,Shopping,11
+2026-01-01,09:00,Main Entrance,Entry,28
+2026-01-01,09:00,Elephant Bathing Area,River Observation,18
+2026-01-01,09:00,Milk Feeding Nursery,Bottle Feeding,19
+2026-01-01,09:00,Museum,General Visit,15
+2026-01-01,09:00,Souvenir Shop,Shopping,14
+2026-01-01,10:00,Main Entrance,Entry,34
+2026-01-01,10:00,Elephant Bathing Area,River Bathing,26
+2026-01-01,10:00,Milk Feeding Nursery,Closed,24
+2026-01-01,10:00,Museum,General Visit,22
+2026-01-01,10:00,Souvenir Shop,Shopping,15
+2026-01-01,11:00,Main Entrance,Entry,33
+2026-01-01,11:00,Elephant Bathing Area,River Bathing,27
+2026-01-01,11:00,Milk Feeding Nursery,Closed,24
+2026-01-01,11:00,Museum,General Visit,20
+2026-01-01,11:00,Souvenir Shop,Shopping,16
+2026-01-01,12:00,Main Entrance,Entry,33
+2026-01-01,12:00,Elephant Bathing Area,River Observation,23
+2026-01-01,12:00,Milk Feeding Nursery,Closed,22
+2026-01-01,12:00,Museum,General Visit,18
+2026-01-01,12:00,Souvenir Shop,Shopping,11
+2026-01-01,13:00,Main Entrance,Entry,35
+2026-01-01,13:00,Elephant Bathing Area,River Observation,24
+2026-01-01,13:00,Milk Feeding Nursery,Bottle Feeding,24
+2026-01-01,13:00,Museum,General Visit,18
+2026-01-01,13:00,Souvenir Shop,Shopping,13
+2026-01-01,14:00,Main Entrance,Entry,40
+2026-01-01,14:00,Elephant Bathing Area,River Bathing,24
+2026-01-01,14:00,Milk Feeding Nursery,Closed,26
+2026-01-01,14:00,Museum,General Visit,20
+2026-01-01,14:00,Souvenir Shop,Shopping,13
+2026-01-01,15:00,Main Entrance,Entry,30
+2026-01-01,15:00,Elephant Bathing Area,River Bathing,23
+2026-01-01,15:00,Milk Feeding Nursery,Closed,18
+2026-01-01,15:00,Museum,General Visit,17
+2026-01-01,15:00,Souvenir Shop,Shopping,10
+2026-01-01,16:00,Main Entrance,Entry,20
+2026-01-01,16:00,Elephant Bathing Area,River Observation,16
+2026-01-01,16:00,Milk Feeding Nursery,Closed,13
+2026-01-01,16:00,Museum,General Visit,13
+2026-01-01,16:00,Souvenir Shop,Shopping,10
+2026-01-01,17:00,Main Entrance,Entry,10
+2026-01-01,17:00,Elephant Bathing Area,River Observation,6
+2026-01-01,17:00,Milk Feeding Nursery,Bottle Feeding,5
+2026-01-01,17:00,Museum,General Visit,5
+2026-01-01,17:00,Souvenir Shop,Shopping,4
+2026-01-02,08:00,Main Entrance,Entry,19
+2026-01-02,08:00,Elephant Bathing Area,River Observation,13
+2026-01-02,08:00,Milk Feeding Nursery,Closed,12
+2026-01-02,08:00,Museum,General Visit,10
+2026-01-02,08:00,Souvenir Shop,Shopping,11
+2026-01-02,09:00,Main Entrance,Entry,27
+2026-01-02,09:00,Elephant Bathing Area,River Observation,21
+2026-01-02,09:00,Milk Feeding Nursery,Bottle Feeding,19
+2026-01-02,09:00,Museum,General Visit,17
+2026-01-02,09:00,Souvenir Shop,Shopping,15
+2026-01-02,10:00,Main Entrance,Entry,36
+2026-01-02,10:00,Elephant Bathing Area,River Bathing,35
+2026-01-02,10:00,Milk Feeding Nursery,Closed,32
+2026-01-02,10:00,Museum,General Visit,27
+2026-01-02,10:00,Souvenir Shop,Shopping,18
+2026-01-02,11:00,Main Entrance,Entry,41
+2026-01-02,11:00,Elephant Bathing Area,River Bathing,34
+2026-01-02,11:00,Milk Feeding Nursery,Closed,36
+2026-01-02,11:00,Museum,General Visit,25
+2026-01-02,11:00,Souvenir Shop,Shopping,22
+2026-01-02,12:00,Main Entrance,Entry,31
+2026-01-02,12:00,Elephant Bathing Area,River Observation,23
+2026-01-02,12:00,Milk Feeding Nursery,Closed,24
+2026-01-02,12:00,Museum,General Visit,18
+2026-01-02,12:00,Souvenir Shop,Shopping,13
+2026-01-02,13:00,Main Entrance,Entry,37
+2026-01-02,13:00,Elephant Bathing Area,River Observation,26
+2026-01-02,13:00,Milk Feeding Nursery,Bottle Feeding,27
+2026-01-02,13:00,Museum,General Visit,20
+2026-01-02,13:00,Souvenir Shop,Shopping,14
+2026-01-02,14:00,Main Entrance,Entry,39
+2026-01-02,14:00,Elephant Bathing Area,River Bathing,29
+2026-01-02,14:00,Milk Feeding Nursery,Closed,30
+2026-01-02,14:00,Museum,General Visit,22
+2026-01-02,14:00,Souvenir Shop,Shopping,16
+2026-01-02,15:00,Main Entrance,Entry,33
+2026-01-02,15:00,Elephant Bathing Area,River Bathing,26
+2026-01-02,15:00,Milk Feeding Nursery,Closed,26
+2026-01-02,15:00,Museum,General Visit,21
+2026-01-02,15:00,Souvenir Shop,Shopping,11
+2026-01-02,16:00,Main Entrance,Entry,25
+2026-01-02,16:00,Elephant Bathing Area,River Observation,18
+2026-01-02,16:00,Milk Feeding Nursery,Closed,16
+2026-01-02,16:00,Museum,General Visit,14
+2026-01-02,16:00,Souvenir Shop,Shopping,11
+2026-01-02,17:00,Main Entrance,Entry,11
+2026-01-02,17:00,Elephant Bathing Area,River Observation,7
+2026-01-02,17:00,Milk Feeding Nursery,Bottle Feeding,6
+2026-01-02,17:00,Museum,General Visit,5
+2026-01-02,17:00,Souvenir Shop,Shopping,5
+2026-01-03,08:00,Main Entrance,Entry,20
+2026-01-03,08:00,Elephant Bathing Area,River Observation,11
+2026-01-03,08:00,Milk Feeding Nursery,Closed,11
+2026-01-03,08:00,Museum,General Visit,8
+2026-01-03,08:00,Souvenir Shop,Shopping,5
+2026-01-03,09:00,Main Entrance,Entry,31
+2026-01-03,09:00,Elephant Bathing Area,River Observation,21
+2026-01-03,09:00,Milk Feeding Nursery,Bottle Feeding,18
+2026-01-03,09:00,Museum,General Visit,16
+2026-01-03,09:00,Souvenir Shop,Shopping,9
+2026-01-03,10:00,Main Entrance,Entry,34
+2026-01-03,10:00,Elephant Bathing Area,River Bathing,27
+2026-01-03,10:00,Milk Feeding Nursery,Closed,23
+2026-01-03,10:00,Museum,General Visit,21
+2026-01-03,10:00,Souvenir Shop,Shopping,17
+2026-01-03,11:00,Main Entrance,Entry,41
+2026-01-03,11:00,Elephant Bathing Area,River Bathing,25
+2026-01-03,11:00,Milk Feeding Nursery,Closed,24
+2026-01-03,11:00,Museum,General Visit,23
+2026-01-03,11:00,Souvenir Shop,Shopping,12
+2026-01-03,12:00,Main Entrance,Entry,31
+2026-01-03,12:00,Elephant Bathing Area,River Observation,24
+2026-01-03,12:00,Milk Feeding Nursery,Closed,21
+2026-01-03,12:00,Museum,General Visit,18
+2026-01-03,12:00,Souvenir Shop,Shopping,15
+2026-01-03,13:00,Main Entrance,Entry,28
+2026-01-03,13:00,Elephant Bathing Area,River Observation,22
+2026-01-03,13:00,Milk Feeding Nursery,Bottle Feeding,17
+2026-01-03,13:00,Museum,General Visit,18
+2026-01-03,13:00,Souvenir Shop,Shopping,15
+2026-01-03,14:00,Main Entrance,Entry,34
+2026-01-03,14:00,Elephant Bathing Area,River Bathing,25
+2026-01-03,14:00,Milk Feeding Nursery,Closed,21
+2026-01-03,14:00,Museum,General Visit,21
+2026-01-03,14:00,Souvenir Shop,Shopping,20
+2026-01-03,15:00,Main Entrance,Entry,25
+2026-01-03,15:00,Elephant Bathing Area,River Bathing,21
+2026-01-03,15:00,Milk Feeding Nursery,Closed,18
+2026-01-03,15:00,Museum,General Visit,19
+2026-01-03,15:00,Souvenir Shop,Shopping,18
+2026-01-03,16:00,Main Entrance,Entry,22
+2026-01-03,16:00,Elephant Bathing Area,River Observation,16
+2026-01-03,16:00,Milk Feeding Nursery,Closed,13
+2026-01-03,16:00,Museum,General Visit,10
+2026-01-03,16:00,Souvenir Shop,Shopping,7
+2026-01-03,17:00,Main Entrance,Entry,8
+2026-01-03,17:00,Elephant Bathing Area,River Observation,6
+2026-01-03,17:00,Milk Feeding Nursery,Bottle Feeding,6
+2026-01-03,17:00,Museum,General Visit,5
+2026-01-03,17:00,Souvenir Shop,Shopping,4
+2026-01-04,08:00,Main Entrance,Entry,18
+2026-01-04,08:00,Elephant Bathing Area,River Observation,12
+2026-01-04,08:00,Milk Feeding Nursery,Closed,12
+2026-01-04,08:00,Museum,General Visit,10
+2026-01-04,08:00,Souvenir Shop,Shopping,9
+2026-01-04,09:00,Main Entrance,Entry,23
+2026-01-04,09:00,Elephant Bathing Area,River Observation,19
+2026-01-04,09:00,Milk Feeding Nursery,Bottle Feeding,19
+2026-01-04,09:00,Museum,General Visit,14
+2026-01-04,09:00,Souvenir Shop,Shopping,12
+2026-01-04,10:00,Main Entrance,Entry,45
+2026-01-04,10:00,Elephant Bathing Area,River Bathing,33
+2026-01-04,10:00,Milk Feeding Nursery,Closed,30
+2026-01-04,10:00,Museum,General Visit,27
+2026-01-04,10:00,Souvenir Shop,Shopping,20
+2026-01-04,11:00,Main Entrance,Entry,36
+2026-01-04,11:00,Elephant Bathing Area,River Bathing,31
+2026-01-04,11:00,Milk Feeding Nursery,Closed,26
+2026-01-04,11:00,Museum,General Visit,26
+2026-01-04,11:00,Souvenir Shop,Shopping,24
+2026-01-04,12:00,Main Entrance,Entry,34
+2026-01-04,12:00,Elephant Bathing Area,River Observation,26
+2026-01-04,12:00,Milk Feeding Nursery,Closed,23
+2026-01-04,12:00,Museum,General Visit,19
+2026-01-04,12:00,Souvenir Shop,Shopping,22
+2026-01-04,13:00,Main Entrance,Entry,32
+2026-01-04,13:00,Elephant Bathing Area,River Observation,29
+2026-01-04,13:00,Milk Feeding Nursery,Bottle Feeding,25
+2026-01-04,13:00,Museum,General Visit,20
+2026-01-04,13:00,Souvenir Shop,Shopping,19
+2026-01-04,14:00,Main Entrance,Entry,41
+2026-01-04,14:00,Elephant Bathing Area,River Bathing,29
+2026-01-04,14:00,Milk Feeding Nursery,Closed,27
+2026-01-04,14:00,Museum,General Visit,21
+2026-01-04,14:00,Souvenir Shop,Shopping,18
+2026-01-04,15:00,Main Entrance,Entry,33
+2026-01-04,15:00,Elephant Bathing Area,River Bathing,26
+2026-01-04,15:00,Milk Feeding Nursery,Closed,22
+2026-01-04,15:00,Museum,General Visit,19
+2026-01-04,15:00,Souvenir Shop,Shopping,15
+2026-01-04,16:00,Main Entrance,Entry,24
+2026-01-04,16:00,Elephant Bathing Area,River Observation,17
+2026-01-04,16:00,Milk Feeding Nursery,Closed,17
+2026-01-04,16:00,Museum,General Visit,13
+2026-01-04,16:00,Souvenir Shop,Shopping,9
+2026-01-04,17:00,Main Entrance,Entry,9
+2026-01-04,17:00,Elephant Bathing Area,River Observation,7
+2026-01-04,17:00,Milk Feeding Nursery,Bottle Feeding,7
+2026-01-04,17:00,Museum,General Visit,6
+2026-01-04,17:00,Souvenir Shop,Shopping,4
+2026-01-05,08:00,Main Entrance,Entry,17
+2026-01-05,08:00,Elephant Bathing Area,River Observation,15
+2026-01-05,08:00,Milk Feeding Nursery,Closed,14
+2026-01-05,08:00,Museum,General Visit,10
+2026-01-05,08:00,Souvenir Shop,Shopping,8
+2026-01-05,09:00,Main Entrance,Entry,33
+2026-01-05,09:00,Elephant Bathing Area,River Observation,17
+2026-01-05,09:00,Milk Feeding Nursery,Bottle Feeding,18
+2026-01-05,09:00,Museum,General Visit,15
+2026-01-05,09:00,Souvenir Shop,Shopping,13
+2026-01-05,10:00,Main Entrance,Entry,40
+2026-01-05,10:00,Elephant Bathing Area,River Bathing,23
+2026-01-05,10:00,Milk Feeding Nursery,Closed,28
+2026-01-05,10:00,Museum,General Visit,22
+2026-01-05,10:00,Souvenir Shop,Shopping,19
+2026-01-05,11:00,Main Entrance,Entry,49
+2026-01-05,11:00,Elephant Bathing Area,River Bathing,32
+2026-01-05,11:00,Milk Feeding Nursery,Closed,33
+2026-01-05,11:00,Museum,General Visit,29
+2026-01-05,11:00,Souvenir Shop,Shopping,21
+2026-01-05,12:00,Main Entrance,Entry,30
+2026-01-05,12:00,Elephant Bathing Area,River Observation,25
+2026-01-05,12:00,Milk Feeding Nursery,Closed,26
+2026-01-05,12:00,Museum,General Visit,20
+2026-01-05,12:00,Souvenir Shop,Shopping,13
+2026-01-05,13:00,Main Entrance,Entry,32
+2026-01-05,13:00,Elephant Bathing Area,River Observation,25
+2026-01-05,13:00,Milk Feeding Nursery,Bottle Feeding,30
+2026-01-05,13:00,Museum,General Visit,22
+2026-01-05,13:00,Souvenir Shop,Shopping,18
+2026-01-05,14:00,Main Entrance,Entry,29
+2026-01-05,14:00,Elephant Bathing Area,River Bathing,29
+2026-01-05,14:00,Milk Feeding Nursery,Closed,31
+2026-01-05,14:00,Museum,General Visit,27
+2026-01-05,14:00,Souvenir Shop,Shopping,16
+2026-01-05,15:00,Main Entrance,Entry,26
+2026-01-05,15:00,Elephant Bathing Area,River Bathing,27
+2026-01-05,15:00,Milk Feeding Nursery,Closed,26
+2026-01-05,15:00,Museum,General Visit,23
+2026-01-05,15:00,Souvenir Shop,Shopping,12
+2026-01-05,16:00,Main Entrance,Entry,23
+2026-01-05,16:00,Elephant Bathing Area,River Observation,18
+2026-01-05,16:00,Milk Feeding Nursery,Closed,18
+2026-01-05,16:00,Museum,General Visit,14
+2026-01-05,16:00,Souvenir Shop,Shopping,11
+2026-01-05,17:00,Main Entrance,Entry,10
+2026-01-05,17:00,Elephant Bathing Area,River Observation,7
+2026-01-05,17:00,Milk Feeding Nursery,Bottle Feeding,7
+2026-01-05,17:00,Museum,General Visit,5
+2026-01-05,17:00,Souvenir Shop,Shopping,5
+2026-01-06,08:00,Main Entrance,Entry,18
+2026-01-06,08:00,Elephant Bathing Area,River Observation,11
+2026-01-06,08:00,Milk Feeding Nursery,Closed,9
+2026-01-06,08:00,Museum,General Visit,9
+2026-01-06,08:00,Souvenir Shop,Shopping,7
+2026-01-06,09:00,Main Entrance,Entry,23
+2026-01-06,09:00,Elephant Bathing Area,River Observation,16
+2026-01-06,09:00,Milk Feeding Nursery,Bottle Feeding,17
+2026-01-06,09:00,Museum,General Visit,13
+2026-01-06,09:00,Souvenir Shop,Shopping,12
+2026-01-06,10:00,Main Entrance,Entry,28
+2026-01-06,10:00,Elephant Bathing Area,River Bathing,25
+2026-01-06,10:00,Milk Feeding Nursery,Closed,22
+2026-01-06,10:00,Museum,General Visit,19
+2026-01-06,10:00,Souvenir Shop,Shopping,15
+2026-01-06,11:00,Main Entrance,Entry,36
+2026-01-06,11:00,Elephant Bathing Area,River Bathing,24
+2026-01-06,11:00,Milk Feeding Nursery,Closed,26
+2026-01-06,11:00,Museum,General Visit,21
+2026-01-06,11:00,Souvenir Shop,Shopping,14
+2026-01-06,12:00,Main Entrance,Entry,22
+2026-01-06,12:00,Elephant Bathing Area,River Observation,18
+2026-01-06,12:00,Milk Feeding Nursery,Closed,20
+2026-01-06,12:00,Museum,General Visit,16
+2026-01-06,12:00,Souvenir Shop,Shopping,14
+2026-01-06,13:00,Main Entrance,Entry,24
+2026-01-06,13:00,Elephant Bathing Area,River Observation,22
+2026-01-06,13:00,Milk Feeding Nursery,Bottle Feeding,23
+2026-01-06,13:00,Museum,General Visit,17
+2026-01-06,13:00,Souvenir Shop,Shopping,16
+2026-01-06,14:00,Main Entrance,Entry,29
+2026-01-06,14:00,Elephant Bathing Area,River Bathing,22
+2026-01-06,14:00,Milk Feeding Nursery,Closed,22
+2026-01-06,14:00,Museum,General Visit,19
+2026-01-06,14:00,Souvenir Shop,Shopping,17
+2026-01-06,15:00,Main Entrance,Entry,24
+2026-01-06,15:00,Elephant Bathing Area,River Bathing,24
+2026-01-06,15:00,Milk Feeding Nursery,Closed,22
+2026-01-06,15:00,Museum,General Visit,17
+2026-01-06,15:00,Souvenir Shop,Shopping,15
+2026-01-06,16:00,Main Entrance,Entry,17
+2026-01-06,16:00,Elephant Bathing Area,River Observation,15
+2026-01-06,16:00,Milk Feeding Nursery,Closed,16
+2026-01-06,16:00,Museum,General Visit,13
+2026-01-06,16:00,Souvenir Shop,Shopping,8
+2026-01-06,17:00,Main Entrance,Entry,8
+2026-01-06,17:00,Elephant Bathing Area,River Observation,6
+2026-01-06,17:00,Milk Feeding Nursery,Bottle Feeding,5
+2026-01-06,17:00,Museum,General Visit,4
+2026-01-06,17:00,Souvenir Shop,Shopping,4
+2026-01-07,08:00,Main Entrance,Entry,16
+2026-01-07,08:00,Elephant Bathing Area,River Observation,10
+2026-01-07,08:00,Milk Feeding Nursery,Closed,10
+2026-01-07,08:00,Museum,General Visit,8
+2026-01-07,08:00,Souvenir Shop,Shopping,7
+2026-01-07,09:00,Main Entrance,Entry,20
+2026-01-07,09:00,Elephant Bathing Area,River Observation,17
+2026-01-07,09:00,Milk Feeding Nursery,Bottle Feeding,16
+2026-01-07,09:00,Museum,General Visit,13
+2026-01-07,09:00,Souvenir Shop,Shopping,12
+2026-01-07,10:00,Main Entrance,Entry,37
+2026-01-07,10:00,Elephant Bathing Area,River Bathing,26
+2026-01-07,10:00,Milk Feeding Nursery,Closed,25
+2026-01-07,10:00,Museum,General Visit,22
+2026-01-07,10:00,Souvenir Shop,Shopping,22
+2026-01-07,11:00,Main Entrance,Entry,43
+2026-01-07,11:00,Elephant Bathing Area,River Bathing,28
+2026-01-07,11:00,Milk Feeding Nursery,Closed,29
+2026-01-07,11:00,Museum,General Visit,26
+2026-01-07,11:00,Souvenir Shop,Shopping,24
+2026-01-07,12:00,Main Entrance,Entry,31
+2026-01-07,12:00,Elephant Bathing Area,River Observation,18
+2026-01-07,12:00,Milk Feeding Nursery,Closed,23
+2026-01-07,12:00,Museum,General Visit,18
+2026-01-07,12:00,Souvenir Shop,Shopping,16
+2026-01-07,13:00,Main Entrance,Entry,34
+2026-01-07,13:00,Elephant Bathing Area,River Observation,25
+2026-01-07,13:00,Milk Feeding Nursery,Bottle Feeding,26
+2026-01-07,13:00,Museum,General Visit,21
+2026-01-07,13:00,Souvenir Shop,Shopping,21
+2026-01-07,14:00,Main Entrance,Entry,35
+2026-01-07,14:00,Elephant Bathing Area,River Bathing,27
+2026-01-07,14:00,Milk Feeding Nursery,Closed,25
+2026-01-07,14:00,Museum,General Visit,22
+2026-01-07,14:00,Souvenir Shop,Shopping,20
+2026-01-07,15:00,Main Entrance,Entry,29
+2026-01-07,15:00,Elephant Bathing Area,River Bathing,25
+2026-01-07,15:00,Milk Feeding Nursery,Closed,24
+2026-01-07,15:00,Museum,General Visit,20
+2026-01-07,15:00,Souvenir Shop,Shopping,16
+2026-01-07,16:00,Main Entrance,Entry,15
+2026-01-07,16:00,Elephant Bathing Area,River Observation,17
+2026-01-07,16:00,Milk Feeding Nursery,Closed,16
+2026-01-07,16:00,Museum,General Visit,12
+2026-01-07,16:00,Souvenir Shop,Shopping,12
+2026-01-07,17:00,Main Entrance,Entry,8
+2026-01-07,17:00,Elephant Bathing Area,River Observation,6
+2026-01-07,17:00,Milk Feeding Nursery,Bottle Feeding,5
+2026-01-07,17:00,Museum,General Visit,5
+2026-01-07,17:00,Souvenir Shop,Shopping,5
+2026-01-08,08:00,Main Entrance,Entry,15
+2026-01-08,08:00,Elephant Bathing Area,River Observation,10
+2026-01-08,08:00,Milk Feeding Nursery,Closed,11
+2026-01-08,08:00,Museum,General Visit,8
+2026-01-08,08:00,Souvenir Shop,Shopping,10
+2026-01-08,09:00,Main Entrance,Entry,27
+2026-01-08,09:00,Elephant Bathing Area,River Observation,18
+2026-01-08,09:00,Milk Feeding Nursery,Bottle Feeding,20
+2026-01-08,09:00,Museum,General Visit,17
+2026-01-08,09:00,Souvenir Shop,Shopping,16
+2026-01-08,10:00,Main Entrance,Entry,41
+2026-01-08,10:00,Elephant Bathing Area,River Bathing,27
+2026-01-08,10:00,Milk Feeding Nursery,Closed,29
+2026-01-08,10:00,Museum,General Visit,24
+2026-01-08,10:00,Souvenir Shop,Shopping,22
+2026-01-08,11:00,Main Entrance,Entry,38
+2026-01-08,11:00,Elephant Bathing Area,River Bathing,30
+2026-01-08,11:00,Milk Feeding Nursery,Closed,30
+2026-01-08,11:00,Museum,General Visit,25
+2026-01-08,11:00,Souvenir Shop,Shopping,18
+2026-01-08,12:00,Main Entrance,Entry,34
+2026-01-08,12:00,Elephant Bathing Area,River Observation,19
+2026-01-08,12:00,Milk Feeding Nursery,Closed,24
+2026-01-08,12:00,Museum,General Visit,20
+2026-01-08,12:00,Souvenir Shop,Shopping,13
+2026-01-08,13:00,Main Entrance,Entry,34
+2026-01-08,13:00,Elephant Bathing Area,River Observation,24
+2026-01-08,13:00,Milk Feeding Nursery,Bottle Feeding,27
+2026-01-08,13:00,Museum,General Visit,22
+2026-01-08,13:00,Souvenir Shop,Shopping,24
+2026-01-08,14:00,Main Entrance,Entry,42
+2026-01-08,14:00,Elephant Bathing Area,River Bathing,28
+2026-01-08,14:00,Milk Feeding Nursery,Closed,32
+2026-01-08,14:00,Museum,General Visit,24
+2026-01-08,14:00,Souvenir Shop,Shopping,21
+2026-01-08,15:00,Main Entrance,Entry,36
+2026-01-08,15:00,Elephant Bathing Area,River Bathing,25
+2026-01-08,15:00,Milk Feeding Nursery,Closed,21
+2026-01-08,15:00,Museum,General Visit,19
+2026-01-08,15:00,Souvenir Shop,Shopping,13
+2026-01-08,16:00,Main Entrance,Entry,21
+2026-01-08,16:00,Elephant Bathing Area,River Observation,17
+2026-01-08,16:00,Milk Feeding Nursery,Closed,16
+2026-01-08,16:00,Museum,General Visit,12
+2026-01-08,16:00,Souvenir Shop,Shopping,13
+2026-01-08,17:00,Main Entrance,Entry,9
+2026-01-08,17:00,Elephant Bathing Area,River Observation,7
+2026-01-08,17:00,Milk Feeding Nursery,Bottle Feeding,5
+2026-01-08,17:00,Museum,General Visit,5
+2026-01-08,17:00,Souvenir Shop,Shopping,4
+2026-01-09,08:00,Main Entrance,Entry,18
+2026-01-09,08:00,Elephant Bathing Area,River Observation,10
+2026-01-09,08:00,Milk Feeding Nursery,Closed,11
+2026-01-09,08:00,Museum,General Visit,8
+2026-01-09,08:00,Souvenir Shop,Shopping,7
+2026-01-09,09:00,Main Entrance,Entry,21
+2026-01-09,09:00,Elephant Bathing Area,River Observation,18
+2026-01-09,09:00,Milk Feeding Nursery,Bottle Feeding,16
+2026-01-09,09:00,Museum,General Visit,14
+2026-01-09,09:00,Souvenir Shop,Shopping,13
+2026-01-09,10:00,Main Entrance,Entry,34
+2026-01-09,10:00,Elephant Bathing Area,River Bathing,28
+2026-01-09,10:00,Milk Feeding Nursery,Closed,25
+2026-01-09,10:00,Museum,General Visit,21
+2026-01-09,10:00,Souvenir Shop,Shopping,17
+2026-01-09,11:00,Main Entrance,Entry,32
+2026-01-09,11:00,Elephant Bathing Area,River Bathing,27
+2026-01-09,11:00,Milk Feeding Nursery,Closed,28
+2026-01-09,11:00,Museum,General Visit,21
+2026-01-09,11:00,Souvenir Shop,Shopping,23
+2026-01-09,12:00,Main Entrance,Entry,26
+2026-01-09,12:00,Elephant Bathing Area,River Observation,17
+2026-01-09,12:00,Milk Feeding Nursery,Closed,16
+2026-01-09,12:00,Museum,General Visit,16
+2026-01-09,12:00,Souvenir Shop,Shopping,10
+2026-01-09,13:00,Main Entrance,Entry,29
+2026-01-09,13:00,Elephant Bathing Area,River Observation,19
+2026-01-09,13:00,Milk Feeding Nursery,Bottle Feeding,19
+2026-01-09,13:00,Museum,General Visit,17
+2026-01-09,13:00,Souvenir Shop,Shopping,15
+2026-01-09,14:00,Main Entrance,Entry,31
+2026-01-09,14:00,Elephant Bathing Area,River Bathing,21
+2026-01-09,14:00,Milk Feeding Nursery,Closed,20
+2026-01-09,14:00,Museum,General Visit,17
+2026-01-09,14:00,Souvenir Shop,Shopping,14
+2026-01-09,15:00,Main Entrance,Entry,28
+2026-01-09,15:00,Elephant Bathing Area,River Bathing,20
+2026-01-09,15:00,Milk Feeding Nursery,Closed,21
+2026-01-09,15:00,Museum,General Visit,17
+2026-01-09,15:00,Souvenir Shop,Shopping,14
+2026-01-09,16:00,Main Entrance,Entry,20
+2026-01-09,16:00,Elephant Bathing Area,River Observation,16
+2026-01-09,16:00,Milk Feeding Nursery,Closed,15
+2026-01-09,16:00,Museum,General Visit,12
+2026-01-09,16:00,Souvenir Shop,Shopping,14
+2026-01-09,17:00,Main Entrance,Entry,9
+2026-01-09,17:00,Elephant Bathing Area,River Observation,5
+2026-01-09,17:00,Milk Feeding Nursery,Bottle Feeding,4
+2026-01-09,17:00,Museum,General Visit,4
+2026-01-09,17:00,Souvenir Shop,Shopping,3
+2026-01-10,08:00,Main Entrance,Entry,17
+2026-01-10,08:00,Elephant Bathing Area,River Observation,10
+2026-01-10,08:00,Milk Feeding Nursery,Closed,9
+2026-01-10,08:00,Museum,General Visit,7
+2026-01-10,08:00,Souvenir Shop,Shopping,5
+2026-01-10,09:00,Main Entrance,Entry,19
+2026-01-10,09:00,Elephant Bathing Area,River Observation,17
+2026-01-10,09:00,Milk Feeding Nursery,Bottle Feeding,14
+2026-01-10,09:00,Museum,General Visit,13
+2026-01-10,09:00,Souvenir Shop,Shopping,9
+2026-01-10,10:00,Main Entrance,Entry,29
+2026-01-10,10:00,Elephant Bathing Area,River Bathing,21
+2026-01-10,10:00,Milk Feeding Nursery,Closed,19
+2026-01-10,10:00,Museum,General Visit,18
+2026-01-10,10:00,Souvenir Shop,Shopping,13
+2026-01-10,11:00,Main Entrance,Entry,38
+2026-01-10,11:00,Elephant Bathing Area,River Bathing,22
+2026-01-10,11:00,Milk Feeding Nursery,Closed,26
+2026-01-10,11:00,Museum,General Visit,20
+2026-01-10,11:00,Souvenir Shop,Shopping,10
+2026-01-10,12:00,Main Entrance,Entry,25
+2026-01-10,12:00,Elephant Bathing Area,River Observation,18
+2026-01-10,12:00,Milk Feeding Nursery,Closed,19
+2026-01-10,12:00,Museum,General Visit,16
+2026-01-10,12:00,Souvenir Shop,Shopping,12
+2026-01-10,13:00,Main Entrance,Entry,26
+2026-01-10,13:00,Elephant Bathing Area,River Observation,18
+2026-01-10,13:00,Milk Feeding Nursery,Bottle Feeding,16
+2026-01-10,13:00,Museum,General Visit,13
+2026-01-10,13:00,Souvenir Shop,Shopping,13
+2026-01-10,14:00,Main Entrance,Entry,26
+2026-01-10,14:00,Elephant Bathing Area,River Bathing,19
+2026-01-10,14:00,Milk Feeding Nursery,Closed,20
+2026-01-10,14:00,Museum,General Visit,16
+2026-01-10,14:00,Souvenir Shop,Shopping,15
+2026-01-10,15:00,Main Entrance,Entry,21
+2026-01-10,15:00,Elephant Bathing Area,River Bathing,17
+2026-01-10,15:00,Milk Feeding Nursery,Closed,18
+2026-01-10,15:00,Museum,General Visit,15
+2026-01-10,15:00,Souvenir Shop,Shopping,17
+2026-01-10,16:00,Main Entrance,Entry,22
+2026-01-10,16:00,Elephant Bathing Area,River Observation,15
+2026-01-10,16:00,Milk Feeding Nursery,Closed,12
+2026-01-10,16:00,Museum,General Visit,10
+2026-01-10,16:00,Souvenir Shop,Shopping,8
+2026-01-10,17:00,Main Entrance,Entry,7
+2026-01-10,17:00,Elephant Bathing Area,River Observation,5
+2026-01-10,17:00,Milk Feeding Nursery,Bottle Feeding,4
+2026-01-10,17:00,Museum,General Visit,4
+2026-01-10,17:00,Souvenir Shop,Shopping,5
+2026-01-11,08:00,Main Entrance,Entry,21
+2026-01-11,08:00,Elephant Bathing Area,River Observation,15
+2026-01-11,08:00,Milk Feeding Nursery,Closed,13
+2026-01-11,08:00,Museum,General Visit,12
+2026-01-11,08:00,Souvenir Shop,Shopping,10
+2026-01-11,09:00,Main Entrance,Entry,35
+2026-01-11,09:00,Elephant Bathing Area,River Observation,21
+2026-01-11,09:00,Milk Feeding Nursery,Bottle Feeding,25
+2026-01-11,09:00,Museum,General Visit,20
+2026-01-11,09:00,Souvenir Shop,Shopping,19
+2026-01-11,10:00,Main Entrance,Entry,48
+2026-01-11,10:00,Elephant Bathing Area,River Bathing,38
+2026-01-11,10:00,Milk Feeding Nursery,Closed,36
+2026-01-11,10:00,Museum,General Visit,28
+2026-01-11,10:00,Souvenir Shop,Shopping,17
+2026-01-11,11:00,Main Entrance,Entry,47
+2026-01-11,11:00,Elephant Bathing Area,River Bathing,38
+2026-01-11,11:00,Milk Feeding Nursery,Closed,40
+2026-01-11,11:00,Museum,General Visit,33
+2026-01-11,11:00,Souvenir Shop,Shopping,17
+2026-01-11,12:00,Main Entrance,Entry,33
+2026-01-11,12:00,Elephant Bathing Area,River Observation,30
+2026-01-11,12:00,Milk Feeding Nursery,Closed,28
+2026-01-11,12:00,Museum,General Visit,23
+2026-01-11,12:00,Souvenir Shop,Shopping,22
+2026-01-11,13:00,Main Entrance,Entry,32
+2026-01-11,13:00,Elephant Bathing Area,River Observation,36
+2026-01-11,13:00,Milk Feeding Nursery,Bottle Feeding,31
+2026-01-11,13:00,Museum,General Visit,27
+2026-01-11,13:00,Souvenir Shop,Shopping,21
+2026-01-11,14:00,Main Entrance,Entry,35
+2026-01-11,14:00,Elephant Bathing Area,River Bathing,39
+2026-01-11,14:00,Milk Feeding Nursery,Closed,35
+2026-01-11,14:00,Museum,General Visit,30
+2026-01-11,14:00,Souvenir Shop,Shopping,19
+2026-01-11,15:00,Main Entrance,Entry,38
+2026-01-11,15:00,Elephant Bathing Area,River Bathing,32
+2026-01-11,15:00,Milk Feeding Nursery,Closed,32
+2026-01-11,15:00,Museum,General Visit,26
+2026-01-11,15:00,Souvenir Shop,Shopping,18
+2026-01-11,16:00,Main Entrance,Entry,29
+2026-01-11,16:00,Elephant Bathing Area,River Observation,21
+2026-01-11,16:00,Milk Feeding Nursery,Closed,21
+2026-01-11,16:00,Museum,General Visit,16
+2026-01-11,16:00,Souvenir Shop,Shopping,13
+2026-01-11,17:00,Main Entrance,Entry,11
+2026-01-11,17:00,Elephant Bathing Area,River Observation,6
+2026-01-11,17:00,Milk Feeding Nursery,Bottle Feeding,8
+2026-01-11,17:00,Museum,General Visit,7
+2026-01-11,17:00,Souvenir Shop,Shopping,6
+2026-01-12,08:00,Main Entrance,Entry,16
+2026-01-12,08:00,Elephant Bathing Area,River Observation,13
+2026-01-12,08:00,Milk Feeding Nursery,Closed,12
+2026-01-12,08:00,Museum,General Visit,8
+2026-01-12,08:00,Souvenir Shop,Shopping,6
+2026-01-12,09:00,Main Entrance,Entry,24
+2026-01-12,09:00,Elephant Bathing Area,River Observation,15
+2026-01-12,09:00,Milk Feeding Nursery,Bottle Feeding,14
+2026-01-12,09:00,Museum,General Visit,11
+2026-01-12,09:00,Souvenir Shop,Shopping,11
+2026-01-12,10:00,Main Entrance,Entry,27
+2026-01-12,10:00,Elephant Bathing Area,River Bathing,22
+2026-01-12,10:00,Milk Feeding Nursery,Closed,25
+2026-01-12,10:00,Museum,General Visit,20
+2026-01-12,10:00,Souvenir Shop,Shopping,22
+2026-01-12,11:00,Main Entrance,Entry,31
+2026-01-12,11:00,Elephant Bathing Area,River Bathing,27
+2026-01-12,11:00,Milk Feeding Nursery,Closed,27
+2026-01-12,11:00,Museum,General Visit,23
+2026-01-12,11:00,Souvenir Shop,Shopping,25
+2026-01-12,12:00,Main Entrance,Entry,24
+2026-01-12,12:00,Elephant Bathing Area,River Observation,19
+2026-01-12,12:00,Milk Feeding Nursery,Closed,18
+2026-01-12,12:00,Museum,General Visit,16
+2026-01-12,12:00,Souvenir Shop,Shopping,14
+2026-01-12,13:00,Main Entrance,Entry,35
+2026-01-12,13:00,Elephant Bathing Area,River Observation,19
+2026-01-12,13:00,Milk Feeding Nursery,Bottle Feeding,22
+2026-01-12,13:00,Museum,General Visit,18
+2026-01-12,13:00,Souvenir Shop,Shopping,17
+2026-01-12,14:00,Main Entrance,Entry,33
+2026-01-12,14:00,Elephant Bathing Area,River Bathing,25
+2026-01-12,14:00,Milk Feeding Nursery,Closed,22
+2026-01-12,14:00,Museum,General Visit,19
+2026-01-12,14:00,Souvenir Shop,Shopping,16
+2026-01-12,15:00,Main Entrance,Entry,31
+2026-01-12,15:00,Elephant Bathing Area,River Bathing,19
+2026-01-12,15:00,Milk Feeding Nursery,Closed,22
+2026-01-12,15:00,Museum,General Visit,17
+2026-01-12,15:00,Souvenir Shop,Shopping,16
+2026-01-12,16:00,Main Entrance,Entry,23
+2026-01-12,16:00,Elephant Bathing Area,River Observation,13
+2026-01-12,16:00,Milk Feeding Nursery,Closed,13
+2026-01-12,16:00,Museum,General Visit,9
+2026-01-12,16:00,Souvenir Shop,Shopping,10
+2026-01-12,17:00,Main Entrance,Entry,9
+2026-01-12,17:00,Elephant Bathing Area,River Observation,6
+2026-01-12,17:00,Milk Feeding Nursery,Bottle Feeding,6
+2026-01-12,17:00,Museum,General Visit,5
+2026-01-12,17:00,Souvenir Shop,Shopping,4
+2026-01-13,08:00,Main Entrance,Entry,20
+2026-01-13,08:00,Elephant Bathing Area,River Observation,11
+2026-01-13,08:00,Milk Feeding Nursery,Closed,10
+2026-01-13,08:00,Museum,General Visit,8
+2026-01-13,08:00,Souvenir Shop,Shopping,9
+2026-01-13,09:00,Main Entrance,Entry,32
+2026-01-13,09:00,Elephant Bathing Area,River Observation,16
+2026-01-13,09:00,Milk Feeding Nursery,Bottle Feeding,19
+2026-01-13,09:00,Museum,General Visit,15
+2026-01-13,09:00,Souvenir Shop,Shopping,18
+2026-01-13,10:00,Main Entrance,Entry,34
+2026-01-13,10:00,Elephant Bathing Area,River Bathing,26
+2026-01-13,10:00,Milk Feeding Nursery,Closed,27
+2026-01-13,10:00,Museum,General Visit,21
+2026-01-13,10:00,Souvenir Shop,Shopping,24
+2026-01-13,11:00,Main Entrance,Entry,41
+2026-01-13,11:00,Elephant Bathing Area,River Bathing,28
+2026-01-13,11:00,Milk Feeding Nursery,Closed,27
+2026-01-13,11:00,Museum,General Visit,19
+2026-01-13,11:00,Souvenir Shop,Shopping,24
+2026-01-13,12:00,Main Entrance,Entry,32
+2026-01-13,12:00,Elephant Bathing Area,River Observation,20
+2026-01-13,12:00,Milk Feeding Nursery,Closed,23
+2026-01-13,12:00,Museum,General Visit,20
+2026-01-13,12:00,Souvenir Shop,Shopping,20
+2026-01-13,13:00,Main Entrance,Entry,37
+2026-01-13,13:00,Elephant Bathing Area,River Observation,32
+2026-01-13,13:00,Milk Feeding Nursery,Bottle Feeding,28
+2026-01-13,13:00,Museum,General Visit,23
+2026-01-13,13:00,Souvenir Shop,Shopping,20
+2026-01-13,14:00,Main Entrance,Entry,36
+2026-01-13,14:00,Elephant Bathing Area,River Bathing,31
+2026-01-13,14:00,Milk Feeding Nursery,Closed,28
+2026-01-13,14:00,Museum,General Visit,22
+2026-01-13,14:00,Souvenir Shop,Shopping,22
+2026-01-13,15:00,Main Entrance,Entry,30
+2026-01-13,15:00,Elephant Bathing Area,River Bathing,22
+2026-01-13,15:00,Milk Feeding Nursery,Closed,22
+2026-01-13,15:00,Museum,General Visit,19
+2026-01-13,15:00,Souvenir Shop,Shopping,20
+2026-01-13,16:00,Main Entrance,Entry,20
+2026-01-13,16:00,Elephant Bathing Area,River Observation,18
+2026-01-13,16:00,Milk Feeding Nursery,Closed,17
+2026-01-13,16:00,Museum,General Visit,12
+2026-01-13,16:00,Souvenir Shop,Shopping,9
+2026-01-13,17:00,Main Entrance,Entry,9
+2026-01-13,17:00,Elephant Bathing Area,River Observation,8
+2026-01-13,17:00,Milk Feeding Nursery,Bottle Feeding,6
+2026-01-13,17:00,Museum,General Visit,5
+2026-01-13,17:00,Souvenir Shop,Shopping,3
+2026-01-14,08:00,Main Entrance,Entry,14
+2026-01-14,08:00,Elephant Bathing Area,River Observation,10
+2026-01-14,08:00,Milk Feeding Nursery,Closed,8
+2026-01-14,08:00,Museum,General Visit,7
+2026-01-14,08:00,Souvenir Shop,Shopping,6
+2026-01-14,09:00,Main Entrance,Entry,23
+2026-01-14,09:00,Elephant Bathing Area,River Observation,19
+2026-01-14,09:00,Milk Feeding Nursery,Bottle Feeding,19
+2026-01-14,09:00,Museum,General Visit,14
+2026-01-14,09:00,Souvenir Shop,Shopping,17
+2026-01-14,10:00,Main Entrance,Entry,32
+2026-01-14,10:00,Elephant Bathing Area,River Bathing,22
+2026-01-14,10:00,Milk Feeding Nursery,Closed,23
+2026-01-14,10:00,Museum,General Visit,19
+2026-01-14,10:00,Souvenir Shop,Shopping,21
+2026-01-14,11:00,Main Entrance,Entry,31
+2026-01-14,11:00,Elephant Bathing Area,River Bathing,29
+2026-01-14,11:00,Milk Feeding Nursery,Closed,26
+2026-01-14,11:00,Museum,General Visit,25
+2026-01-14,11:00,Souvenir Shop,Shopping,24
+2026-01-14,12:00,Main Entrance,Entry,26
+2026-01-14,12:00,Elephant Bathing Area,River Observation,21
+2026-01-14,12:00,Milk Feeding Nursery,Closed,21
+2026-01-14,12:00,Museum,General Visit,18
+2026-01-14,12:00,Souvenir Shop,Shopping,15
+2026-01-14,13:00,Main Entrance,Entry,29
+2026-01-14,13:00,Elephant Bathing Area,River Observation,26
+2026-01-14,13:00,Milk Feeding Nursery,Bottle Feeding,25
+2026-01-14,13:00,Museum,General Visit,22
+2026-01-14,13:00,Souvenir Shop,Shopping,20
+2026-01-14,14:00,Main Entrance,Entry,28
+2026-01-14,14:00,Elephant Bathing Area,River Bathing,32
+2026-01-14,14:00,Milk Feeding Nursery,Closed,27
+2026-01-14,14:00,Museum,General Visit,22
+2026-01-14,14:00,Souvenir Shop,Shopping,19
+2026-01-14,15:00,Main Entrance,Entry,29
+2026-01-14,15:00,Elephant Bathing Area,River Bathing,21
+2026-01-14,15:00,Milk Feeding Nursery,Closed,21
+2026-01-14,15:00,Museum,General Visit,15
+2026-01-14,15:00,Souvenir Shop,Shopping,11
+2026-01-14,16:00,Main Entrance,Entry,21
+2026-01-14,16:00,Elephant Bathing Area,River Observation,14
+2026-01-14,16:00,Milk Feeding Nursery,Closed,15
+2026-01-14,16:00,Museum,General Visit,11
+2026-01-14,16:00,Souvenir Shop,Shopping,9
+2026-01-14,17:00,Main Entrance,Entry,7
+2026-01-14,17:00,Elephant Bathing Area,River Observation,6
+2026-01-14,17:00,Milk Feeding Nursery,Bottle Feeding,5
+2026-01-14,17:00,Museum,General Visit,4
+2026-01-14,17:00,Souvenir Shop,Shopping,4

@@ -39,7 +39,7 @@ function AddElephant() {
 
     return (
         <div className="container">
-            <Link to="/dashboard" style={{ color: '#fff', fontWeight: 600, display: 'inline-block', marginBottom: '2rem' }}>← Back to Dashboard</Link>
+            <Link to="/dashboard" style={{ color: 'var(--primary-accent)', fontWeight: 600, display: 'inline-block', marginBottom: '2rem' }}>← Back to Dashboard</Link>
 
             <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto' }}>
                 <h1 style={{ marginBottom: '2rem' }}>Add New Elephant Profile</h1>

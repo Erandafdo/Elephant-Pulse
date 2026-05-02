@@ -324,6 +324,89 @@ def stress_history(elephant_id=1):
         })
     return jsonify(formatted_logs)
 
+@app.route('/api/stress/predict', methods=['POST'])
+def predict_stress():
+    if 'file' not in request.files:
+        return jsonify({"detail": "No file uploaded"}), 400
+        
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({"detail": "Empty file uploaded"}), 400
+        
+    import tempfile
+    import joblib
+    import numpy as np
+    from core_logic.feature_extractor import FeatureExtractor
+    
+    temp_path = os.path.join(tempfile.gettempdir(), file.filename)
+    file.save(temp_path)
+    
+    try:
+        model = joblib.load(os.path.join(BASE_DIR, 'models', 'stress_detector.pkl'))
+        cap = cv2.VideoCapture(temp_path)
+        ret, frame1 = cap.read()
+        if not ret:
+            return jsonify({"detail": "Could not read video file"}), 400
+            
+        prvs = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
+        feature_extractor = FeatureExtractor(buffer_size=30)
+        feature_names = feature_extractor.get_feature_names()
+        
+        stress_probs = []
+        normal_probs = []
+        
+        frame_count = 0
+        while frame_count < 150:
+            ret, frame2 = cap.read()
+            if not ret: break
+            
+            next_frame = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
+            flow = cv2.calcOpticalFlowFarneback(prvs, next_frame, None, 0.5, 3, 15, 3, 5, 1.2, 0)
+            mag, ang = cv2.cartToPolar(flow[..., 0], flow[..., 1])
+            
+            mask = mag > 2.0
+            if np.any(mask):
+                coords = np.argwhere(mask)
+                centroid = (np.mean(coords[:, 1]), np.mean(coords[:, 0]))
+            else:
+                centroid = None
+                
+            feature_extractor.update(centroid)
+            features = feature_extractor.extract_features()
+            
+            if features is not None:
+                df_features = pd.DataFrame([features], columns=feature_names)
+                probs = model.predict_proba(df_features)[0]
+                stress_probs.append(float(probs[1]))
+                normal_probs.append(float(probs[0]))
+                
+            prvs = next_frame
+            frame_count += 1
+            
+        cap.release()
+        os.remove(temp_path)
+        
+        if not stress_probs:
+            return jsonify({"detail": "Video too short or no features extracted"}), 400
+            
+        avg_stress = sum(stress_probs) / len(stress_probs)
+        avg_normal = sum(normal_probs) / len(normal_probs)
+        prediction = "Stress" if avg_stress > 0.5 else "Normal"
+        
+        return jsonify({
+            "prediction": prediction,
+            "probs": {
+                "stress": avg_stress,
+                "normal": avg_normal
+            },
+            "n_clips": 1
+        }), 200
+        
+    except Exception as e:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+        return jsonify({"detail": str(e)}), 500
+
 # --- Food Chain Endpoints ---
 @app.route('/api/food/recommend', methods=['POST'])
 def get_food_recommendations():

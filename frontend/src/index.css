@@ -2,19 +2,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;800&display=swap');
 
 :root {
-    --bg-dark: #0a0a0a;
-    --text-main: #ffffff;
-    --text-muted: #a0a0a0;
-    --primary-accent: #00f2ea;
-    --secondary-accent: #ff0055;
+    --bg-dark: #000000;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --primary-accent: #10b981;
+    --secondary-accent: #f43f5e;
+    --accent-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --danger-gradient: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
 
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --glass-bg: rgba(15, 20, 40, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
 
-    --status-healthy: #00ff88;
-    --status-warning: #ffaa00;
-    --status-critical: #ff0040;
+    --status-healthy: #10b981;
+    --status-warning: #f59e0b;
+    --status-critical: #ef4444;
+    --status-unknown-bg: rgba(255, 255, 255, 0.05);
+    --status-unknown-text: #f8fafc;
+
+    --h1-gradient: linear-gradient(90deg, #f8fafc, #cbd5e1);
+    --input-bg: rgba(15, 23, 42, 0.6);
+    --input-text: #f8fafc;
+}
+
+[data-theme="light"] {
+    --bg-dark: #fcfdfd;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --primary-accent: #059669;
+    --secondary-accent: #e11d48;
+    --accent-gradient: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    --danger-gradient: linear-gradient(135deg, #fb7185 0%, #e11d48 100%);
+
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+
+    --status-healthy: #059669;
+    --status-warning: #d97706;
+    --status-critical: #dc2626;
+    --status-unknown-bg: rgba(0, 0, 0, 0.05);
+    --status-unknown-text: #334155;
+
+    --h1-gradient: linear-gradient(90deg, #0f172a, #334155);
+    --input-bg: rgba(255, 255, 255, 0.9);
+    --input-text: #0f172a;
 }
 
 body {
@@ -23,8 +55,13 @@ body {
     font-family: 'Outfit', sans-serif;
     margin: 0;
     min-height: 100vh;
-    background: radial-gradient(circle at 10% 20%, rgb(0 0 0) 0%, rgb(18 18 18) 90%);
+    background: radial-gradient(circle at top right, #0a0a0a 0%, #000000 100%);
     overflow-x: hidden;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+[data-theme="light"] body {
+    background: radial-gradient(circle at top right, #f1f5f9 0%, #e2e8f0 100%);
 }
 
 /* Glassmorphism Card */
@@ -49,8 +86,9 @@ body {
 h1 {
     font-weight: 800;
     letter-spacing: -1px;
-    background: linear-gradient(90deg, #fff, #aaa);
+    background: var(--h1-gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
 }
@@ -105,7 +143,7 @@ a:hover {
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--text-main);
 }
 
 .logo span {
@@ -129,15 +167,14 @@ select,
 textarea {
     width: 100%;
     padding: 12px;
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--input-bg);
     border: 1px solid var(--glass-border);
     border-radius: 8px;
-    color: #fff;
+    color: var(--input-text);
     font-family: inherit;
     font-size: 1rem;
-    transition: border 0.3s, box-shadow 0.3s;
+    transition: border 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
     box-sizing: border-box;
-    /* Fix for box sizing often missed */
 }
 
 input:focus,
@@ -151,13 +188,13 @@ select:focus {
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background: linear-gradient(135deg, var(--primary-accent), #00aaff);
-    color: #000;
+    background: var(--accent-gradient);
+    color: #ffffff;
     font-weight: 800;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.9rem;
@@ -165,12 +202,18 @@ select:focus {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(0, 242, 234, 0.4);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    filter: brightness(1.1);
 }
 
 .btn-danger {
-    background: linear-gradient(135deg, #ff0055, #ff4444);
-    color: #fff;
+    background: var(--danger-gradient);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+}
+
+.btn-danger:hover {
+    box-shadow: 0 8px 25px rgba(225, 29, 72, 0.5);
 }
 
 /* Elephant Card */
@@ -217,8 +260,8 @@ select:focus {
 }
 
 .status-Unknown {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    background: var(--status-unknown-bg);
+    color: var(--status-unknown-text);
 }
 
 /* Profile Page */
@@ -253,7 +296,7 @@ select:focus {
     text-align: left;
     padding: 1rem;
     border-bottom: 1px solid var(--glass-border);
-    color: #fff;
+    color: var(--text-main);
 }
 
 /* Landing Page Specifics */

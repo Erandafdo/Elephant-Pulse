@@ -155,9 +155,9 @@ function ElephantFoodChain({ id, data }) {
     };
 
     const tabStyle = active => ({
-        padding: '8px 18px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: '0.9rem',
-        background: active ? 'var(--primary-accent)' : 'rgba(255,255,255,0.07)',
-        color: active ? '#000' : '#fff', transition: 'all 0.2s'
+        padding: '8px 18px', borderRadius: '6px', border: '1px solid var(--glass-border)', cursor: 'pointer', fontWeight: 600, fontSize: '0.9rem',
+        background: active ? 'var(--primary-accent)' : 'var(--glass-bg)',
+        color: active ? '#ffffff' : 'var(--text-main)', transition: 'all 0.2s'
     });
 
     return (
@@ -195,7 +195,7 @@ function ElephantFoodChain({ id, data }) {
                             <input type="text" name="ai_remark" value={formData.ai_remark} onChange={handleChange} />
                         </div>
                         {submitMsg && <div style={{ marginBottom: '1rem', color: submitMsg.startsWith('✅') ? '#00ff88' : '#ff0040' }}>{submitMsg}</div>}
-                        <button type="submit" className="btn btn-primary" style={{ width: '100%', background: '#4caf50' }}>💾 Log Feeding Data</button>
+                        <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>💾 Log Feeding Data</button>
                     </form>
                 </div>
             )}
@@ -234,7 +234,7 @@ function ElephantFoodChain({ id, data }) {
                             <div style={{ padding: '1rem', background: 'rgba(255,255,255,0.04)', borderRadius: '8px', borderLeft: '3px solid #00ff88', fontStyle: 'italic', color: 'var(--text-muted)' }}>
                                 💡 {aiRec.remark}
                             </div>
-                            <button className="btn btn-primary" onClick={() => { setActiveTab('log'); }} style={{ marginTop: '1rem', background: '#4caf50' }}>
+                            <button className="btn btn-primary" onClick={() => { setActiveTab('log'); }} style={{ marginTop: '1rem' }}>
                                 📝 Use These Values to Log
                             </button>
                         </div>
@@ -259,11 +259,11 @@ function ElephantFoodChain({ id, data }) {
                             </thead>
                             <tbody>
                                 {history.map((row, i) => (
-                                    <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+                                    <tr key={i} style={{ borderBottom: '1px solid var(--glass-border)' }}>
                                         <td style={{ padding: '10px 12px', fontWeight: 600 }}>{row.date}</td>
                                         <td style={{ padding: '10px 12px', color: '#ffaa00' }}>{row.morning_food_kg?.toFixed(1)}</td>
                                         <td style={{ padding: '10px 12px', color: '#818cf8' }}>{row.evening_food_kg?.toFixed(1)}</td>
-                                        <td style={{ padding: '10px 12px', color: '#00ff88', fontWeight: 700 }}>{((row.morning_food_kg || 0) + (row.evening_food_kg || 0)).toFixed(1)}</td>
+                                        <td style={{ padding: '10px 12px', color: 'var(--status-healthy)', fontWeight: 700 }}>{((row.morning_food_kg || 0) + (row.evening_food_kg || 0)).toFixed(1)}</td>
                                         <td style={{ padding: '10px 12px' }}><span className={`status-badge status-${row.health_status === 'Healthy' ? 'Healthy' : 'Warning'}`} style={{ margin: 0, fontSize: '0.75rem' }}>{row.health_status || '–'}</span></td>
                                         <td style={{ padding: '10px 12px' }}>{row.temperature_c}°C</td>
                                         <td style={{ padding: '10px 12px', color: 'var(--text-muted)', fontSize: '0.85rem', fontStyle: 'italic' }}>{row.ai_remark}</td>
@@ -290,11 +290,11 @@ function ElephantFoodChain({ id, data }) {
                         </thead>
                         <tbody>
                             {forecast.map((row, i) => (
-                                <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.04)', background: i === 0 ? 'rgba(0,255,136,0.03)' : 'transparent' }}>
-                                    <td style={{ padding: '10px 12px', fontWeight: 700, color: i === 0 ? '#00ff88' : '#fff' }}>{row.date}{i === 0 && ' (Today)'}</td>
+                                <tr key={i} style={{ borderBottom: '1px solid var(--glass-border)', background: i === 0 ? 'rgba(16,185,129,0.04)' : 'transparent' }}>
+                                    <td style={{ padding: '10px 12px', fontWeight: 700, color: i === 0 ? 'var(--status-healthy)' : 'var(--text-main)' }}>{row.date}{i === 0 && ' (Today)'}</td>
                                     <td style={{ padding: '10px 12px', color: '#ffaa00' }}>{row.morning_kg}</td>
                                     <td style={{ padding: '10px 12px', color: '#818cf8' }}>{row.evening_kg}</td>
-                                    <td style={{ padding: '10px 12px', fontWeight: 700 }}>{row.total_kg}</td>
+                                    <td style={{ padding: '10px 12px', fontWeight: 700, color: 'var(--text-main)' }}>{row.total_kg}</td>
                                     <td style={{ padding: '10px 12px', fontSize: '0.85rem', color: 'var(--text-muted)' }}>{row.morning_schedule}</td>
                                     <td style={{ padding: '10px 12px', fontSize: '0.85rem', color: 'var(--text-muted)' }}>{row.evening_schedule}</td>
                                     <td style={{ padding: '10px 12px', fontSize: '0.85rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>{row.remark}</td>
@@ -302,7 +302,7 @@ function ElephantFoodChain({ id, data }) {
                             ))}
                         </tbody>
                     </table>
-                    <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.8rem', marginTop: '1rem' }}>💡 This is an AI projection. Actual feeding should be adjusted daily based on real-time observations.</p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: '1rem' }}>💡 This is an AI projection. Actual feeding should be adjusted daily based on real-time observations.</p>
                 </div>
             )}
         </div>
