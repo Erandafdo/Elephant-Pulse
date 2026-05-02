@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import api from '../utils/api';
 
-function Login() {
+function Login({ onLogin }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
-    const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
         setError(null);
         try {
-            await api.post('/auth/login', { username, password });
-            navigate('/dashboard');
+            const res = await api.post('/auth/login', { username, password });
+            // Tell App we're logged in — App handles navigation
+            if (onLogin) onLogin(res.data.user?.username || username);
         } catch (err) {
             setError(err.response?.data?.error || 'Login failed');
         }

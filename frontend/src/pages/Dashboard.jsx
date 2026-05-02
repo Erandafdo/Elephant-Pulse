@@ -44,8 +44,27 @@ function Dashboard() {
         }
     };
 
-    if (loading) return <div style={{ textAlign: 'center', marginTop: '50px' }}>Loading...</div>;
-    if (error) return <div style={{ color: 'red', textAlign: 'center', marginTop: '50px' }}>{error}</div>;
+    if (loading) return (
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '80vh', gap: '1.5rem' }}>
+            <div style={{
+                width: '48px', height: '48px',
+                border: '4px solid var(--glass-border)',
+                borderTop: '4px solid var(--primary-accent)',
+                borderRadius: '50%',
+                animation: 'spin 0.8s linear infinite'
+            }} />
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>Loading herd data...</p>
+            <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+        </div>
+    );
+    if (error) return (
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '80vh', gap: '1rem' }}>
+            <div style={{ fontSize: '3rem' }}>⚠️</div>
+            <p style={{ color: '#ef4444', fontSize: '1.1rem' }}>{error}</p>
+            <button onClick={() => window.location.reload()} className="btn" style={{ marginTop: '1rem' }}>Retry</button>
+        </div>
+    );
+
 
     // Filter Logic
     const filteredElephants = elephants.filter(elephant => {

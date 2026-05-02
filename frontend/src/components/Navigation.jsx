@@ -1,21 +1,14 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import api from '../utils/api';
 
-function Navigation({ user }) {
+function Navigation({ user, onLogout }) {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const handleLogout = async () => {
-        try {
-            await api.post('/auth/logout');
-            navigate('/login');
-        } catch (err) {
-            console.error('Logout failed:', err);
-            // Optionally force redirect even if API call fails
-            navigate('/login');
-        }
+    const handleLogout = () => {
+        if (onLogout) onLogout();
     };
+
 
     // Hide main navigation on entry/exit pages or the separate Visitor system pages
     const hideOnPaths = ['/', '/login', '/visitor-login', '/visitor-admin', '/visitor-app'];
