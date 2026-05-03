@@ -15,19 +15,23 @@ import Navigation from './components/Navigation';
 import api from './utils/api';
 
 function AppContent() {
+  // null = not yet checked, false = checked & unauthenticated, string = authenticated user
   const [user, setUser] = useState(null);
+  const [authChecked, setAuthChecked] = useState(false);
   const navigate = useNavigate();
 
-  // Check auth only once on initial app load
+  // On mount: restore session from server
   useEffect(() => {
     api.get('/auth/check')
-      .then(res => setUser(res.data.user))
-      .catch(() => setUser(null));
+      .then(res => setUser(res.data.user || false))
+      .catch(() => setUser(false))
+      .finally(() => setAuthChecked(true));
   }, []);
 
   const handleLogin = (username) => {
     setUser(username);
-    navigate('/dashboard');
+    // Use setTimeout(0) to let React commit the state update before navigating
+    setTimeout(() => navigate('/dashboard'), 0);
   };
 
   const handleLogout = async () => {
@@ -36,9 +40,12 @@ function AppContent() {
     } catch (err) {
       console.error('Logout failed:', err);
     }
-    setUser(null);
-    navigate('/login');
+    setUser(false);
+    setTimeout(() => navigate('/login'), 0);
   };
+
+  // Show nothing until we know auth status (prevents flash of wrong content)
+  if (!authChecked) return null;
 
   return (
     <div className="App">
@@ -46,7 +53,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard onLogout={handleLogout} />} />
         <Route path="/add" element={<AddElephant />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/:id" element={<Profile />} />

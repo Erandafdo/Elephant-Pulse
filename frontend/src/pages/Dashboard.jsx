@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import api from '../utils/api';
 import './Dashboard.css';
 
-function Dashboard() {
+function Dashboard({ onLogout }) {
     const [elephants, setElephants] = useState([]);
     const [user, setUser] = useState('');
     const [loading, setLoading] = useState(true);
@@ -24,7 +24,7 @@ function Dashboard() {
                 setLoading(false);
             } catch (err) {
                 if (err.response?.status === 401) {
-                    navigate('/login');
+                    if (onLogout) onLogout();
                 } else {
                     setError('Failed to load dashboard data.');
                     setLoading(false);
@@ -35,13 +35,8 @@ function Dashboard() {
         fetchDashboard();
     }, [navigate]);
 
-    const handleLogout = async () => {
-        try {
-            await api.post('/auth/logout');
-            navigate('/login');
-        } catch (err) {
-            console.error(err);
-        }
+    const handleLogout = () => {
+        if (onLogout) onLogout();
     };
 
     if (loading) return (

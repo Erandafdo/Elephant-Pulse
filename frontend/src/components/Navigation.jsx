@@ -1,14 +1,24 @@
 import React from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navigation({ user, onLogout }) {
-    const navigate = useNavigate();
     const location = useLocation();
+
+    // ✅ ALL hooks must be called at the top level — BEFORE any conditional returns
+    const [isDarkMode, setIsDarkMode] = React.useState(true);
 
     const handleLogout = () => {
         if (onLogout) onLogout();
     };
 
+    const toggleTheme = () => {
+        setIsDarkMode(!isDarkMode);
+        if (isDarkMode) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    };
 
     // Hide main navigation on entry/exit pages or the separate Visitor system pages
     const hideOnPaths = ['/', '/login', '/visitor-login', '/visitor-admin', '/visitor-app'];
@@ -20,17 +30,6 @@ function Navigation({ user, onLogout }) {
     const pathParts = location.pathname.split('/');
     const lastPart = pathParts[pathParts.length - 1];
     const elephantId = !isNaN(lastPart) && lastPart !== '' ? lastPart : null;
-
-    const [isDarkMode, setIsDarkMode] = React.useState(true);
-
-    const toggleTheme = () => {
-        setIsDarkMode(!isDarkMode);
-        if (isDarkMode) {
-            document.documentElement.setAttribute('data-theme', 'light');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    };
 
     return (
         <nav className="glass-card" style={{ borderRadius: 0, padding: '1rem 2rem', borderLeft: 0, borderRight: 0, borderTop: 0, position: 'sticky', top: 0, zIndex: 100, marginBottom: '2rem' }}>
